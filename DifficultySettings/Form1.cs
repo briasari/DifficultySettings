@@ -13,7 +13,7 @@ namespace DifficultySettings
     public partial class Form1 : Form
     {
         string username;
-        string difficulty;
+        string difficultyLevel;
 
         public Form1()
         {
@@ -22,7 +22,7 @@ namespace DifficultySettings
 
         private void button1_Click(object sender, EventArgs e)
         {
-            difficulty = "medium";
+            difficultyLevel = "medium";
 
             easyButton.BackColor = Color.Black;
             mediumButton.BackColor = Color.Coral;
@@ -31,7 +31,7 @@ namespace DifficultySettings
 
         private void easyButton_Click(object sender, EventArgs e)
         {
-            difficulty = "easy";
+            difficultyLevel = "easy";
 
             easyButton.BackColor = Color.LimeGreen;
             mediumButton.BackColor = Color.Black;
@@ -42,13 +42,13 @@ namespace DifficultySettings
         {
             username = userInput.Text;
             outputLabel.Text = $"Farewell, {username}!";
-            outputLabel.Text += $"\nI wish you the best of luck on the {difficulty} path!";
+            outputLabel.Text += $"\nI wish you the best of luck on the {difficultyLevel} path!";
 
         }
 
         private void hardButton_Click(object sender, EventArgs e)
         {
-            difficulty = "hard";
+            difficultyLevel = "hard";
 
             easyButton.BackColor = Color.Black;
             mediumButton.BackColor = Color.Black;
